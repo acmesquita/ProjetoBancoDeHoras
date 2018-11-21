@@ -1,0 +1,29 @@
+<%= nested_form(bank) do |form| %>
+  <% if bank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bank.errors.count, "error") %> prohibited this bank from being saved:</h2>
+
+      <ul>
+      <% bank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :person %>
+    <%= form.text_field :person, id: :bank_person %>
+  </div>
+
+  <%= form.fields_for :points do |f| %>
+    <%= f.datetime_field :hours %>
+    <%= f.text_field :flag %>
+    <%= f.link_to_remove  %>
+  <% end %>
+ <%= form.link_to_add 'Add', :points %>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

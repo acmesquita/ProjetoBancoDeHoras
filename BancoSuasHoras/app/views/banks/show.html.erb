@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h3><%= @bank.person %></h3>
+
+<table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col">
+  <thead>
+    <tr>
+      <th>Domingo</th>
+      <th>Segunda</th>
+      <th>Terça</th>
+      <th>Quarta</th>
+      <th>Quinta</th>
+      <th>Sexta</th>
+      <th>Sabádo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% (0..4).each do |single| %>
+      <tr>
+        <% (0..6).each do |thing| %>
+          <td class="mdl-cell mdl-cell--2-col"><%=@count += 1%></td>
+        <% end %>
+      </tr>
+    <% end %>
+    
+  </tbody>
+</table>
+
+<hr/>
+<%= link_to 'Edit', edit_bank_path(@bank) , class:"mdl-button mdl-js-button mdl-button--colored"%>
+<%= link_to 'Back', banks_path , class:"mdl-button mdl-js-button"%>

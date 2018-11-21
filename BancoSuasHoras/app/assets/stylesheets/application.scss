@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "material";
+ /* Variables and mixins */
+@import "material/variables";
+@import "material/mixins";
+
+/* Resets and dependencies */
+@import "material/resets";
+@import "material/typography";
+
+/* Components */
+@import "material/palette";
+@import "material/ripple";
+@import "material/animation";
+@import "material/badge";
+@import "material/button";
+@import "material/card";
+@import "material/checkbox";
+@import "material/chip";
+@import "material/data-table";
+@import "material/dialog";
+@import "material/mega_footer";
+@import "material/mini_footer";
+@import "material/icon-toggle";
+@import "material/list";
+@import "material/menu";
+@import "material/progress";
+@import "material/layout";
+@import "material/radio";
+@import "material/slider";
+@import "material/snackbar";
+@import "material/spinner";
+@import "material/switch";
+@import "material/tabs";
+@import "material/textfield";
+@import "material/tooltip";
+@import "material/shadow";
+@import "material/grid";
+@import "material/material-icons";
+@import "material/roboto";

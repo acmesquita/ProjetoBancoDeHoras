@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hour: 2018-11-21 13:42:51
+  flag: MyString
+  bank: one
+
+two:
+  hour: 2018-11-21 13:42:51
+  flag: MyString
+  bank: two

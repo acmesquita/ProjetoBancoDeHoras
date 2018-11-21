@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hour:</strong>
+  <%= @point.hour %>
+</p>
+
+<p>
+  <strong>Flag:</strong>
+  <%= @point.flag %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @point.bank %>
+</p>
+
+<%= link_to 'Edit', edit_point_path(@point) %> |
+<%= link_to 'Back', points_path %>

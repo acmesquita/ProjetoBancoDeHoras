@@ -1,0 +1,29 @@
+ <%= form.fields_for :days do |day_form| %>
+    <br/>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <%= day_form.date_field :name, class:"mdl-textfield__input" %>
+      <%= day_form.label :name, class:"mdl-textfield__label" %>
+    </div>
+    <%= day_form.link_to_remove ("<i class='material-icons'>remove</i>").html_safe, class:"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" %>
+    <br/>
+      <%= day_form.fields_for :points do |point_form| %>
+        <br/>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <%= point_form.time_field :start, class:"mdl-textfield__input" %>
+          <%= point_form.label :start, class:"mdl-textfield__label" %>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <%= point_form.time_field :finish, class:"mdl-textfield__input"  %>
+          <%= point_form.label :finish, class:"mdl-textfield__label" %>
+        </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <%= point_form.link_to_remove ("<i class='material-icons'>remove</i>").html_safe, class:"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" %>
+        </div>
+        <br/>
+      <% end %>
+      <p><%= day_form.link_to_add ("<i class='material-icons'>add</i>").html_safe, :points, class:"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" %></p>
+  
+    <% end %>
+  <p><%= form.link_to_add ("<i class='material-icons'>add</i>").html_safe, :days, class:"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab" %></p>
+
+ 

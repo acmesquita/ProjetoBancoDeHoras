@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Banks</h3>
+
+<table class="mdl-cell mdl-cell--8-col mdl-data-table mdl-js-data-table">
+  <thead>
+    <tr>
+      <th class="">Pessoa</th>
+      <th colspan="2">Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @banks.each do |bank| %>
+      <tr>
+        <td><%= link_to bank.person, bank, class:"" %></td>
+        <td><%= link_to 'Edit', edit_bank_path(bank), class:"mdl-button mdl-js-button mdl-button--primary" %></td>
+        <td><%= link_to 'Destroy', bank, method: :delete, data: { confirm: 'Are you sure?' }, class:"mdl-button mdl-js-button mdl-button--accent" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bank', new_bank_path, class:"mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
