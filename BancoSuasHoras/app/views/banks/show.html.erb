@@ -2,24 +2,19 @@
 
 <h3><%= @bank.person %></h3>
 
-<table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col">
+<table class="mdl-data-table mdl-js-data-table mdl-cell mdl-cell--6-col">
   <thead>
     <tr>
-      <th>Domingo</th>
-      <th>Segunda</th>
-      <th>Terça</th>
-      <th>Quarta</th>
-      <th>Quinta</th>
-      <th>Sexta</th>
-      <th>Sabádo</th>
+      <th>Dia</th>
+      <th>Horas cumpridas</th>
     </tr>
   </thead>
   <tbody>
-    <% (0..4).each do |single| %>
+    
+    <% @bank.days.each do |day| %>
       <tr>
-        <% (0..6).each do |thing| %>
-          <td class="mdl-cell mdl-cell--2-col"><%=@count += 1%></td>
-        <% end %>
+        <td class="mdl-cell mdl-cell--2-col"><%=link_to day.name.strftime("%d/%m/%Y"), bank_day_path(@bank)%></td>
+        <td class="mdl-cell mdl-cell--2-col"><%= day.horas_cumpridas %></td>
       </tr>
     <% end %>
     

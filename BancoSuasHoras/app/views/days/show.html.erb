@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h4><%= @day.name.strftime("%d de %B de %Y")%> - <%= @day.horas_cumpridas %></h4>
+
+<table class="mdl-cell mdl-cell--8-col mdl-data-table mdl-js-data-table">
+  <thead>
+    <tr>
+      <th class="">Entrada</th>
+      <th class="">Saída</th>
+      <th class="">Tempo Cumprido</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @day.points.sort.each do |point| %>
+      <tr>
+        <td><%= point.start.strftime("%H:%M:%S") %></td>
+        <td><%= point.finish.strftime("%H:%M:%S") %></td>
+        <td><%= show_time(point)%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back', bank_path(@day.bank), class:"mdl-button mdl-js-button" %>

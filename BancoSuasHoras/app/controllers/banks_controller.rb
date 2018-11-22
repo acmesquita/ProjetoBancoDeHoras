@@ -10,7 +10,7 @@ class BanksController < ApplicationController
   # GET /banks/1
   # GET /banks/1.json
   def show
-    @count = 0;
+    
   end
 
   # GET /banks/new
